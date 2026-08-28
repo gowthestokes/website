@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import spaceIcon from '../img/space.png';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'David Dlima',
+  description = 'David Dlima — machine learning engineer.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f7f3e8" />
+    <link rel="icon" type="image/png" href={spaceIcon.src} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

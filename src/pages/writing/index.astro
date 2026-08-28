@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Footer from '../../components/Footer.astro';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+---
+
+<BaseLayout title="Blog · David Dlima" description="Writing by David Dlima.">
+  <main class="shell">
+    <header class="site-header">
+      <a class="wordmark" href="/">David Dlima</a>
+      <nav aria-label="Primary navigation">
+        <a aria-current="page" href="/writing/">Blog</a>
+        <a href="https://www.linkedin.com/in/davidrdlima/" rel="me">LinkedIn</a>
+        <a href="https://github.com/gowthestokes" rel="me">GitHub</a>
+      </nav>
+    </header>
+
+    <section class="writing-page" aria-labelledby="writing-title">
+      <p class="eyebrow">Notes & ideas</p>
+      <h1 id="writing-title">Blog</h1>
+      {
+        posts.length ? (
+          <div class="post-list">
+            {posts.map((post) => (
+              <article>
+                <p class="post-meta">{post.data.publishedAt.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</p>
+                <h2><a href={`/writing/${post.id}/`}>{post.data.title}</a></h2>
+                <p>{post.data.description}</p>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p class="empty-state">No recent posts</p>
+        )
+      }
+    </section>
+
+    <Footer />
+  </main>
+</BaseLayout>
