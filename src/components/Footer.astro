@@ -1,13 +1,14 @@
+---
+import SocialLinks from './SocialLinks.astro';
+
+interface Props {
+  showSocials?: boolean;
+}
+
+const { showSocials = true } = Astro.props;
+---
+
 <footer>
   <p>© {new Date().getFullYear()} David Dlima</p>
-  <div class="social-links">
-    <a class="social-link" href="https://www.linkedin.com/in/davidrdlima/" rel="me">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3.3a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8ZM3.6 8.6h3.2v11.8H3.6V8.6Zm5.2 0h3.1v1.6h.1c.5-.9 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6.1v6.1h-3.3V15c0-1.3 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.5H8.8V8.6Z" fill="currentColor" /></svg>
-      <span>LinkedIn</span>
-    </a>
-    <a class="social-link" href="https://github.com/gowthestokes" rel="me">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.2 9.2 0 0 0-2.9 17.9c.5.1.6-.2.6-.5v-1.8c-2.4.5-2.9-1-2.9-1-.4-1-.9-1.2-.9-1.2-.7-.5 0-.5 0-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.9-.2-3.9-.9-3.9-4.2 0-.9.3-1.6.8-2.2-.1-.2-.4-1.1.1-2.2 0 0 .7-.2 2.3.8A8 8 0 0 1 12 7c.7 0 1.4.1 2 .3 1.6-1.1 2.3-.8 2.3-.8.5 1.1.2 2 .1 2.2.5.6.8 1.3.8 2.2 0 3.3-2 4-3.9 4.2.3.3.6.8.6 1.6v3.4c0 .3.2.6.6.5A9.2 9.2 0 0 0 12 2.8Z" fill="currentColor" /></svg>
-      <span>GitHub</span>
-    </a>
-  </div>
+  {showSocials && <SocialLinks />}
 </footer>

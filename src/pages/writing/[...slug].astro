@@ -13,6 +13,8 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const formatPostDate = (date: Date, options: Intl.DateTimeFormatOptions) =>
+  date.toLocaleDateString('en-US', { ...options, timeZone: 'UTC' });
 ---
 
 <BaseLayout title={`${post.data.title} · David Dlima`} description={post.data.description}>
@@ -21,13 +23,12 @@ const { Content } = await render(post);
       <a class="wordmark" href="/">David Dlima</a>
       <nav aria-label="Primary navigation">
         <a aria-current="page" href="/writing/">Blog</a>
-        <a href="https://www.linkedin.com/in/davidrdlima/" rel="me">LinkedIn</a>
-        <a href="https://github.com/gowthestokes" rel="me">GitHub</a>
+        <a href="/background/">Background</a>
       </nav>
     </header>
 
     <article class="post-body">
-      <p class="post-meta">{post.data.publishedAt.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+      <p class="post-meta">{formatPostDate(post.data.publishedAt, { month: 'long', day: 'numeric', year: 'numeric' })}</p>
       <h1>{post.data.title}</h1>
       <p class="post-description">{post.data.description}</p>
       <Content />

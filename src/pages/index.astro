@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Footer from '../components/Footer.astro';
+import SocialLinks from '../components/SocialLinks.astro';
 import portrait from '../img/me.JPG';
 ---
 
@@ -10,16 +11,21 @@ import portrait from '../img/me.JPG';
       <a class="wordmark" href="/">David Dlima</a>
       <nav aria-label="Primary navigation">
         <a href="/writing/">Blog</a>
+        <a href="/background/">Background</a>
       </nav>
     </header>
 
     <section class="intro" aria-label="About David Dlima">
       <div class="intro-copy">
-        <p>Hi I'm David D'lima. I am a machine learning engineer that has worked in a number of different spaces including Ads, Integrity, and Recommendations.<p>
+        <p>Hi I'm David D'lima and welcome to my blog!</p>
+        <p>I am a machine learning engineer who has worked in a number of different spaces including Ads, Integrity, and Recommendations.</p>
       </div>
-      <img class="portrait" src={portrait.src} width={portrait.width} height={portrait.height} alt="David Dlima smiling outdoors" />
+      <div class="portrait-stack">
+        <img class="portrait" src={portrait.src} width={portrait.width} height={portrait.height} alt="David Dlima smiling outdoors" />
+        <SocialLinks />
+      </div>
     </section>
 
-    <Footer />
+    <Footer showSocials={false} />
   </main>
 </BaseLayout>

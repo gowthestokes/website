@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Footer from '../components/Footer.astro';
+import capitalOneLogo from '../img/capital_one_logo.jpeg';
+import georgiaTechLogo from '../img/georgia_institute_of_technology_logo.jpeg';
+import ohioStateLogo from '../img/ohio_state_logo.jpeg';
+import rokuLogo from '../img/roku_logo.jpeg';
+import tinderLogo from '../img/tinder_incorporated_logo.jpeg';
+---
+
+<BaseLayout title="Background · David Dlima" description="Career and education background for David Dlima.">
+  <main class="shell">
+    <header class="site-header">
+      <a class="wordmark" href="/">David Dlima</a>
+      <nav aria-label="Primary navigation">
+        <a href="/writing/">Blog</a>
+        <a aria-current="page" href="/background/">Background</a>
+      </nav>
+    </header>
+
+    <section class="background-page" aria-labelledby="background-heading">
+      <p class="eyebrow">A little more context</p>
+      <h1 id="background-heading">Background</h1>
+
+      <section class="resume-section" aria-labelledby="career-heading">
+        <div class="section-heading">
+          <p class="section-kicker">Experience</p>
+          <h2 id="career-heading">Career</h2>
+          <p class="section-summary">8+ years of experience</p>
+        </div>
+        <ol class="timeline">
+          <li class="company-entry">
+            <div class="entry-content">
+              <img class="entry-logo" src={tinderLogo.src} alt="" />
+              <ol class="role-list">
+                <li>
+                  <div>
+                    <h3>Machine Learning Engineer <span class="role-company">· Tinder</span></h3>
+                    <p class="secondary-detail">ML Trust &amp; Safety · Los Angeles, California, United States</p>
+                  </div>
+                  <time datetime="2025-09">Sep 2025 — Present · 1 yr</time>
+                </li>
+                <li>
+                  <div>
+                    <h3>Software Engineer <span class="role-company">· Tinder</span></h3>
+                    <p class="secondary-detail">Distributed Systems</p>
+                  </div>
+                  <time datetime="2024-02">Feb 2024 — Present · 2 yrs 7 mos</time>
+                </li>
+              </ol>
+            </div>
+          </li>
+          <li class="company-entry">
+            <div class="entry-content">
+              <img class="entry-logo" src={rokuLogo.src} alt="" />
+              <ol class="role-list">
+                <li>
+                  <div>
+                    <h3>Software Engineer, Machine Learning <span class="role-company">· Roku Inc.</span></h3>
+                    <p class="secondary-detail">Ad Performance · San Jose, California, United States</p>
+                  </div>
+                  <time datetime="2021-01/2023-12">Jan 2021 — Dec 2023 · 3 yrs</time>
+                </li>
+              </ol>
+            </div>
+          </li>
+          <li class="company-entry">
+            <div class="entry-content">
+              <img class="entry-logo" src={capitalOneLogo.src} alt="" />
+              <ol class="role-list">
+                <li>
+                  <div>
+                    <h3>Software Engineer, Machine Learning <span class="role-company">· Capital One</span></h3>
+                    <p class="secondary-detail">Center for Machine Learning (C4ML) · Washington DC-Baltimore Area</p>
+                  </div>
+                  <time datetime="2018-07/2020-12">Jul 2018 — Dec 2020 · 2 yrs 6 mos</time>
+                </li>
+              </ol>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="resume-section education-section" aria-labelledby="education-heading">
+        <div class="section-heading">
+          <p class="section-kicker">Study</p>
+          <h2 id="education-heading">Education</h2>
+        </div>
+        <div>
+          <ul class="education-list">
+            <li>
+              <img class="entry-logo" src={georgiaTechLogo.src} alt="" />
+              <div>
+                <h3>Georgia Institute of Technology</h3>
+                <p><a href="https://omscs.gatech.edu/" rel="noreferrer" target="_blank">Master of Science in Computer Science</a></p>
+                <details class="course-list">
+                  <summary>M.S. Courses</summary>
+                  <ul>
+                    <li><a href="https://omscs.gatech.edu/cs-7643-deep-learning" rel="noreferrer" target="_blank">Deep Learning</a><code>CS 7643</code></li>
+                    <li><a href="https://omscs.gatech.edu/cs-7641-machine-learning" rel="noreferrer" target="_blank">Machine Learning</a><code>CS 7641</code></li>
+                    <li><a href="https://omscs.gatech.edu/cs-7642-reinforcement-learning" rel="noreferrer" target="_blank">Reinforcement Learning</a><code>CS 7642</code></li>
+                    <li><a href="https://omscs.gatech.edu/cs-6310-software-architecture-and-design" rel="noreferrer" target="_blank">Software Architecture &amp; Design</a><code>CS 6310</code></li>
+                    <li><a href="https://omscs.gatech.edu/isye-6501-intro-analytics-modeling" rel="noreferrer" target="_blank">Introduction to Analytics Modeling</a><code>ISYE 6501</code></li>
+                    <li><a href="https://omscs.gatech.edu/cs-6035-introduction-information-security" rel="noreferrer" target="_blank">Introduction to Information Security</a><code>CS 6035</code></li>
+                    <li><a href="https://omscs.gatech.edu/cs-6476-computer-vision" rel="noreferrer" target="_blank">Computer Vision</a><code>CS 6476</code></li>
+                    <li><a href="https://omscs.gatech.edu/cs-7646-machine-learning-trading" rel="noreferrer" target="_blank">Machine Learning for Trading</a><code>CS 7646</code></li>
+                    <li><a href="https://omscs.gatech.edu/cs-6515-intro-graduate-algorithms" rel="noreferrer" target="_blank">Graduate Algorithms</a><code>CS 6515</code></li>
+                    <li><a href="https://omscs.gatech.edu/cs-6300-software-development-process" rel="noreferrer" target="_blank">Software Development Process</a><code>CS 6300</code></li>
+                  </ul>
+                </details>
+              </div>
+            </li>
+            <li>
+              <img class="entry-logo" src={ohioStateLogo.src} alt="" />
+              <div>
+                <h3>The Ohio State University</h3>
+                <p><a href="https://cbe.osu.edu/prospective-undergraduate-students" rel="noreferrer" target="_blank">Bachelor of Science in Chemical Engineering</a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+    <Footer />
+  </main>
+</BaseLayout>
