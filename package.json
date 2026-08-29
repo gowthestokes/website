@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "lint:sensitive": "node scripts/check-sensitive.mjs",
+    "lint:sensitive:all": "node scripts/check-sensitive.mjs --all",
+    "prepare": "node scripts/install-git-hooks.mjs"
   },
   "devDependencies": {
     "astro": "^5.13.5"
