@@ -15,6 +15,24 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; }
 
+.scroll-progress {
+  position: fixed;
+  z-index: 10;
+  inset: 0 0 auto;
+  height: 0.28rem;
+  background: var(--line);
+  pointer-events: none;
+}
+
+.scroll-progress::after {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--scroll-progress, 0%);
+  background: var(--orange);
+  box-shadow: 0 0 0.65rem color-mix(in srgb, var(--orange) 55%, transparent);
+  content: "";
+}
+
 a {
   color: var(--orange);
   text-decoration-thickness: 0.07em;
@@ -78,8 +96,9 @@ h1, h2 { text-wrap: balance; }
   height: var(--portrait-size);
   object-fit: cover;
   object-position: 50% 45%;
-  border: 1px solid var(--line);
-  border-radius: 50%;
+  border: 2px solid var(--ink);
+  border-radius: 1rem;
+  box-shadow: 0.35rem 0.35rem 0 var(--green);
 }
 
 .writing-page { min-height: calc(100vh - 17rem); padding: clamp(4rem, 9vw, 7rem) 0; }
@@ -129,8 +148,33 @@ footer {
 }
 
 footer p { margin: 0; }
-.social-links { display: flex; gap: 1.2rem; }
-.social-link { display: inline-flex; align-items: center; gap: 0.4rem; }
+.social-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.55rem;
+  box-shadow: 0.22rem 0.22rem 0 var(--green);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  transition: box-shadow 120ms ease, transform 120ms ease, background-color 120ms ease;
+}
+
+.social-link:hover {
+  box-shadow: 0.06rem 0.06rem 0 var(--green);
+  color: var(--ink);
+  background: #fbf1c7;
+  transform: translate(0.16rem, 0.16rem);
+}
+
+.social-link:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
 .social-link svg { width: 1.05rem; height: 1.05rem; }
 
 @media (max-width: 43rem) {

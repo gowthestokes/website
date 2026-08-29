@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Footer from '../components/Footer.astro';
+import portrait from '../img/me.JPG';
 ---
 
 <BaseLayout>
@@ -16,7 +17,7 @@ import Footer from '../components/Footer.astro';
       <div class="intro-copy">
         <p>Hi I'm David D'lima. I am a machine learning engineer that has worked in a number of different spaces including Ads, Integrity, and Recommendations.<p>
       </div>
-      <img class="portrait" src="/images/david-dlima.jpg" width="1698" height="1740" alt="David Dlima smiling outdoors" />
+      <img class="portrait" src={portrait.src} width={portrait.width} height={portrait.height} alt="David Dlima smiling outdoors" />
     </section>
 
     <Footer />
