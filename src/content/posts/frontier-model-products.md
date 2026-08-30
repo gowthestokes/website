@@ -9,7 +9,7 @@ I felt like I was in [this scene] from True Detective recently with Opus 5 halfw
 
 It suddenly hit me that it had to be a [fighter brand] tactic (also known as a flanker brand). 
 
-> As customers trade down to lower-priced offers because of economic constraints, many managers ... with a classic strategic conundrum: tackle the threat head-on ... or should they maintain prices, hope for better times to return, and in the meantime lose customers ... many companies choose the third option of launching a fighter brand
+> The strategy is most often used in difficult economic times. As customers trade down to lower-priced offers because of economic constraints, many managers at mid-tier and premium brands are faced with a classic strategic conundrum: should they tackle the threat head-on and reduce existing prices, knowing it will reduce profits and potentially commodify the brand, or should they maintain prices, hope for better times to return, and in the meantime lose customers who might never come back. With both alternatives often equally unpalatable, many companies choose the third option of launching a fighter brand.
 
 General Motors did this with Saturn to counter affordable Japanese manufacturers. Intel made Celeron to compete with cheap PCs. And Anheuser-Busch made Busch to fight off inexpensive local beers while making Budweiser feel more premium.
 
