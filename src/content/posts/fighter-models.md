@@ -1,5 +1,5 @@
 ---
-title: The LLM Fighter Model Traps
+title: LLM Fighter Models
 description: Lower quality LLMs to fight off cheaper competition
 publishedAt: 2026-08-31
 draft: false
