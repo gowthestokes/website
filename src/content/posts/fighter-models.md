@@ -18,7 +18,8 @@ Sometimes it works (Intel and AB), sometimes it doesn't (Saturn).
 It's no secret that Chinese models are catching up. At the time of writing this, Kimi K3, GLM 5.3 would make me nervous if I were OpenAI or Anthropic.
 
 ![Benchmark comparing frontier and Chinese models](../img/fighter-models/benchmark.png)
-[source](https://livebench.ai/#/?sort=Coding&dir=desc)
+
+<p class="image-source"><em><a href="https://livebench.ai/#/?sort=Coding&dir=desc">Source</a></em></p>
 
 "They copied us" is way more convenient than "Chinese labs created a product that reset customer expectations on price." 
 

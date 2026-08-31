@@ -312,6 +312,12 @@ h1, h2 { text-wrap: balance; }
   border: 1px solid var(--line);
   border-radius: 0.5rem;
 }
+.post-body .image-source {
+  margin-top: -1.7rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
 
 footer {
   display: flex;
