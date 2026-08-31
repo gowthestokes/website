@@ -280,6 +280,93 @@ h1, h2 { text-wrap: balance; }
   line-height: 0.95;
 }
 
+.contact-page {
+  min-height: calc(100vh - 17rem);
+  max-width: 42rem;
+  padding: clamp(4rem, 9vw, 7rem) 0;
+}
+
+.contact-page h1 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 0.95;
+}
+
+.contact-intro {
+  max-width: 35rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  color: var(--muted);
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  line-height: 1.5;
+}
+
+.contact-form { display: grid; gap: 1.4rem; }
+.form-field { display: grid; gap: 0.55rem; }
+.form-field label {
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  background: #fffdf5;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0.75rem 0.85rem;
+}
+
+.form-field textarea { min-height: 10rem; resize: vertical; }
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--orange);
+  outline: 3px solid color-mix(in srgb, var(--orange) 25%, transparent);
+  outline-offset: 1px;
+}
+
+.form-honeypot {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.form-submit {
+  justify-self: start;
+  border: 2px solid var(--ink);
+  border-radius: 0.55rem;
+  background: var(--yellow);
+  box-shadow: 0.22rem 0.22rem 0 var(--aqua);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  transition: box-shadow 120ms ease, transform 120ms ease, background-color 120ms ease;
+}
+
+.form-submit:hover {
+  box-shadow: 0.06rem 0.06rem 0 var(--aqua);
+  background: #fabd2f;
+  color: var(--ink);
+  transform: translate(0.16rem, 0.16rem);
+}
+
+.contact-thanks .form-submit { margin-top: 0.5rem; }
+
 .empty-state { color: var(--muted); font-size: clamp(1.25rem, 2vw, 1.6rem); }
 .post-list { max-width: 50rem; }
 .post-list article { padding: 1.7rem 0; border-top: 1px solid var(--line); }
